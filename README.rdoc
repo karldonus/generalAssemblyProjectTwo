@@ -1,0 +1,14 @@
+Please refer to planning directory to find wireframes images and userstories.
+
+--General Assembly Project Two--
+Client: Lynchburg, VA-based Licensed Real Estate Agent specializing in
+rental/property management.
+
+Budget: Confidential
+
+Problem: Overwhelmed with unqualified inquiries emailing him about his rentals
+and wasting his time. He needs a web tracking system that helps him quickly glean
+through inquiries to identify solid leads.
+
+MVP Solution: Build rental inquiry driven web app. See user stories in planning
+directory.
