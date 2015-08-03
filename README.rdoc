@@ -1,6 +1,7 @@
 Please refer to planning directory to find wireframes images and userstories.
 
 --General Assembly Project Two--
+
 Client: Lynchburg, VA-based Licensed Real Estate Agent specializing in
 rental/property management.
 
