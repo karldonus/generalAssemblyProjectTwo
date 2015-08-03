@@ -1,0 +1,9 @@
+<h2>Edit Inquiry Record</h2>
+
+<%= render partial: "form" %>
+<br>
+<br>
+<br>
+<%= form_for(@inquiry, method: :delete) do |f| %>
+  <%= f.submit "Delete Inquiry"%>
+<% end %>

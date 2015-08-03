@@ -1,30 +1,21 @@
-
-<h2><%= @rental.property_name %></h2>
-<h3>Public Info</h3>
-<p class="publicRentalInfo">
-  <ul>Agent: <%= @rental.agent %></ul>
-  <ul>Address: <%= @rental.address %>, <%= @rental.city %>, <%= @rental.state %>, <%= @rental.zipcode %></ul>
-
-  <ul>Monthly Rent: <%= @rental.monthly_rent %></ul>
-  <ul>Number of Beds: <%= @rental.bed_num%></ul>
-  <ul>Number of Baths: <%= @rental.bath_num %></ul>
-  <ul>Availability Date: <%= @rental.availability_date %></ul>
-  <ul>Listing Notes: <%= @rental.listing_notes %></ul>
-</p>
-
-<h3>Realtor Only</h3>
-<p class="agentRentalInfo">
-<ul>Posted: <%= time_ago_in_words(@rental.created_at) %></ul>
-<ul>Client Name: <%= @rental.client_name %></ul>
-<ul>Client Phone: <%= @rental.client_phone %></ul>
-<ul>Client Email: <%= @rental.client_email %></ul>
-<ul>Agent Notes: <%= @rental.admin_notes %></ul>
-</p>
-
-<h3>Interested? Inquire Below</h3>
 <p>
-<%= form_for([@rental, Inquiry.new]) do |f| %>
+<%= form_for([@inquiry]) do |f| %>
 
+  <%= f.radio_button(:qualification, "Strong Candidate") %>
+  <%= label(:qualification, "Strong Candidate") %>
+  <%= f.radio_button(:qualification, "Fair Candidate") %>
+  <%= label(:qualification, "Fair Candidate") %>
+  <%= f.radio_button(:qualification, "Weak Candidate") %>
+  <%= label(:qualification, "Weak Candidate") %>
+  <%= f.radio_button(:qualification, "None") %>
+  <%= label(:qualification, "None") %>
+  <br>
+  <br>
+  <%= f.label :admin_notes, "Agent Notes" %>
+  <br>
+  <%= f.text_area :admin_notes %>
+  <br>
+  <br>
   <%= f.label :first_name, "First Name" %>
   <br>
   <%= f.text_field :first_name %>
@@ -75,6 +66,11 @@
   <%= f.text_area :inquiry_notes %>
   <br>
   <br>
-  <%= f.submit "Submit" %>
+
+
+
+  <%= f.submit "Update" %>
+
+
 <% end  %>
 </p>

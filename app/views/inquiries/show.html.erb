@@ -1,0 +1,20 @@
+<h2>Name: <%= @inquiry.first_name %> <%= @inquiry.last_name %> <%= link_to("(edit)", edit_inquiry_path(@inquiry))%></h2>
+<h3>Inquiry Provided Information</h3>
+
+<p class="agentInquiryInfo">
+  <li>Rental of Interest: <%= @inquiry.rental_id %></li>
+  <li>Credit Score: <%= @inquiry.credit_score %></li>
+  <li>Number of Pets: <%= @inquiry.num_pets %></li>
+  <li>Pets Explained: <%= @inquiry.explain_pets %></li>
+  <li>Phone: <%= @inquiry.phone %></li>
+  <li>Email: <%= @inquiry.email %></li>
+  <li>Number of Tenants: <%= @inquiry.num_tenants %></li>
+  <li>Relation of Tenants: <%= @inquiry.relation_tenants %></li>
+  <li>Inquiry Notes: <%= @inquiry.inquiry_notes %></li>
+</p>
+
+<h3>Agent Provided Information</h3>
+<p class="agentInquiryInfo">
+  <li>Qualification: <%= @inquiry.qualification %></li>
+  <li>Agent Notes: <%= @inquiry.admin_notes %></li>
+</p>

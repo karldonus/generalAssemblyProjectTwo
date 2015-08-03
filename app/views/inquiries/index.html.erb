@@ -1,0 +1,11 @@
+<h2>Inquiry Tracker</h2>
+
+<ul>
+  <% @inquiries.each do |inquiry| %>
+    <p>
+  <%= link_to("More Info", inquiry_path(inquiry))%> Name: <%= inquiry.first_name %>
+  <%= inquiry.last_name %> || Credit Score: <%= inquiry.credit_score %>
+  || Qualification: <%= inquiry.qualification %>
+    </p>
+  <% end %>
+</ul>
