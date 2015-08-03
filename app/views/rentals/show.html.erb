@@ -12,7 +12,7 @@
   <ul>Listing Notes: <%= @rental.listing_notes %></ul>
 </p>
 
-<h3>Realtor Only</h3>
+<h3>Realtor Only <%= link_to("(edit)", edit_rental_path(@rental))%></h3>
 <p class="agentRentalInfo">
 <ul>Posted: <%= time_ago_in_words(@rental.created_at) %></ul>
 <ul>Client Name: <%= @rental.client_name %></ul>
