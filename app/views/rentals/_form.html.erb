@@ -1,6 +1,18 @@
 <p>
-<%= form_for(@rental) do |f| %>
+<%= form_for @rental, html: { multipart: true} do |f| %>
 
+  <%= f.label :image, "Image File" %>
+  <br>
+  <%= f.file_field :image %>
+  <br>
+  <br>
+  <%= image_tag @rental.image.url(:thumb)%>
+  <br>
+  <%= f.label :delete_image, "Delete Image" %>
+  <%= f.check_box :delete_image %>
+  <%= f.submit "Confirm" %>
+  <br>
+  <br>
   <%= f.label :property_name, "Property Name" %>
   <br>
   <%= f.text_field :property_name %>

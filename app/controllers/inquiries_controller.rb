@@ -12,6 +12,7 @@ class InquiriesController < ApplicationController
 
   def show
     @inquiry = Inquiry.find(params[:id])
+    @rental = Rental.find(@inquiry.rental_id)
   end
 
   def edit

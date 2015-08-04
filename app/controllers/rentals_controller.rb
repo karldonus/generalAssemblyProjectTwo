@@ -37,7 +37,7 @@ class RentalsController < ApplicationController
 
   private
   def rental_params
-    params.require(:rental).permit(:agent, :property_name, :address, :city, :state, :zipcode, :monthly_rent, :bed_num, :bath_num, :availability_date, :created_at, :client_name, :client_phone, :client_email, :listing_notes, :admin_notes, :rental_id)
+    params.require(:rental).permit(:delete_image, :agent, :image, :property_name, :address, :city, :state, :zipcode, :monthly_rent, :bed_num, :bath_num, :availability_date, :created_at, :client_name, :client_phone, :client_email, :listing_notes, :admin_notes, :rental_id)
   end
 
 end

@@ -1,10 +1,21 @@
 <h2>Available Rentals <%= link_to image_tag("plus-circle.png", size: "20"), new_rental_path%></h2>
 
-<ul>
+<table>
+  <thead>
+    <tr>
+      <th>Property Name</th>
+      <th>Location</th>
+      <th>Monthly Rent</th>
+    </tr>
+  </thead>
+<tbody>
   <% @rentals.each do |rental| %>
-    <li>
-      <%= link_to(rental.property_name, rental_path(rental))%>
-      </a>
-    </li>
+    <tr>
+      <td><%= link_to(rental.property_name, rental_path(rental))%></td>
+      <td><%= rental.city%></td>
+      <td><%= rental.monthly_rent%></td>
+      <td><%= link_to((image_tag rental.image.url(:thumb)), rental_path(rental))%></td>
+    </tr>
   <% end %>
-</ul>
+</tbody>
+</table>

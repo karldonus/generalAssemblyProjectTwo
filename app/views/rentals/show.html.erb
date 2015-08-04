@@ -1,6 +1,9 @@
 
 <h2><%= @rental.property_name %></h2>
 <h3>Public Info</h3>
+
+<%= image_tag @rental.image.url(:large)%>
+
 <p class="publicRentalInfo">
   <ul>Agent: <%= @rental.agent %></ul>
   <ul>Address: <%= @rental.address %>, <%= @rental.city %>, <%= @rental.state %>, <%= @rental.zipcode %></ul>
