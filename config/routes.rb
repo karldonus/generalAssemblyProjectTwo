@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: 'welcome#index'
 
     resources :rentals do
@@ -8,4 +9,5 @@ Rails.application.routes.draw do
     resources :inquiries
 
     resources :welcome
+
 end

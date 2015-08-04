@@ -15,14 +15,16 @@
   <ul>Listing Notes: <%= @rental.listing_notes %></ul>
 </p>
 
-<h3>Realtor Only <%= link_to("(edit)", edit_rental_path(@rental))%></h3>
-<p class="agentRentalInfo">
-<ul>Posted: <%= time_ago_in_words(@rental.created_at) %></ul>
-<ul>Client Name: <%= @rental.client_name %></ul>
-<ul>Client Phone: <%= @rental.client_phone %></ul>
-<ul>Client Email: <%= @rental.client_email %></ul>
-<ul>Agent Notes: <%= @rental.admin_notes %></ul>
-</p>
+<% if user_signed_in? %>
+  <h3>Realtor Only <%= link_to("(edit)", edit_rental_path(@rental))%></h3>
+  <p class="agentRentalInfo">
+    <ul>Posted: <%= time_ago_in_words(@rental.created_at) %></ul>
+    <ul>Client Name: <%= @rental.client_name %></ul>
+    <ul>Client Phone: <%= @rental.client_phone %></ul>
+    <ul>Client Email: <%= @rental.client_email %></ul>
+    <ul>Agent Notes: <%= @rental.admin_notes %></ul>
+  </p>
+<% end %>
 
 <h3>Interested? Inquire Below</h3>
 <p>

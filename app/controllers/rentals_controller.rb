@@ -1,4 +1,5 @@
 class RentalsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   def index
     @rentals = Rental.all.order(:id).reverse
   end
