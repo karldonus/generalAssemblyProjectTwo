@@ -1,6 +1,6 @@
-<p>
+<div class="inquiry-form">
 <%= form_for([@inquiry]) do |f| %>
-
+  <div class="field-inquiry">
   <%= f.radio_button(:qualification, "Strong Candidate") %>
   <%= label(:qualification, "Strong Candidate") %>
   <%= f.radio_button(:qualification, "Fair Candidate") %>
@@ -9,33 +9,56 @@
   <%= label(:qualification, "Weak Candidate") %>
   <%= f.radio_button(:qualification, "None") %>
   <%= label(:qualification, "None") %>
-  <%= f.label :admin_notes, "Agent Notes" %>
-  <%= f.text_area :admin_notes %>
-  <%= f.label :first_name, "First Name" %>
-  <%= f.text_field :first_name %>
-  <%= f.label :last_name, "Last Name" %>
-  <%= f.text_field :last_name %>
-  <%= f.label :credit_score, "Credit Score" %>
-  <%= f.text_field :credit_score %>
-  <%= f.label :num_pets, "Numbe of Pets" %>
-  <%= f.text_field :num_pets %>
-  <%= f.label :explain_pets, "Please specify breed, weight, etc (if applies)" %>
-  <%= f.text_area :explain_pets %>
-  <%= f.label :phone, "Primary Phone Number" %>
-  <%= f.text_field :phone %>
-  <%= f.label :email, "Primary Email" %>
-  <%= f.text_field :email %>
-  <%= f.label :num_tenants, "How many tenants (including yourself)" %>
-  <%= f.text_field :num_tenants %>
-  <%= f.label :relation_tenants, "Please specify relation of tenants (if applies)" %>
-  <%= f.text_field :relation_tenants %>
-  <%= f.label :inquiry_notes, "Message to listing agent (optional)" %>
-  <%= f.text_area :inquiry_notes %>
+  </div>
+  <div class="field-inquiry">
+    <div class="inquiry-left"><%= f.label :admin_notes, "Agent Notes" %></div>
+    <div class="inquiry-right"><%= f.text_area :admin_notes %></div>
+  </div>
+  <div class="field-inquiry">
+    <div class="inquiry-left"><%= f.label :first_name, "First Name" %></div>
+    <div class="inquiry-right"><%= f.text_field :first_name %></div>
+  </div>
+  <div class="field-inquiry">
+    <div class="inquiry-left"><%= f.label :last_name, "Last Name" %></div>
+    <div class="inquiry-right"><%= f.text_field :last_name %></div>
+  </div>
+  <div class="field-inquiry">
+    <div class="inquiry-left"><%= f.label :credit_score, "Credit Score" %></div>
+    <div class="inquiry-right"><%= f.text_field :credit_score %></div>
+  </div>
+  <div class="field-inquiry">
+    <div class="inquiry-left"><%= f.label :num_pets, "Numbe of Pets" %></div>
+    <div class="inquiry-right"><%= f.text_field :num_pets %></div>
+  </div>
+  <div class="field-inquiry">
+    <div class="inquiry-left"><%= f.label :explain_pets, "Please specify breed, weight, etc (if applies)" %></div>
+    <div class="inquiry-right"><%= f.text_area :explain_pets %></div>
+  </div>
+  <div class="field-inquiry">
+    <div class="inquiry-left"><%= f.label :phone, "Primary Phone Number" %></div>
+    <div class="inquiry-right"><%= f.text_field :phone %></div>
+  </div>
+  <div class="field-inquiry">
+    <div class="inquiry-left"><%= f.label :email, "Primary Email" %></div>
+    <div class="inquiry-right"><%= f.text_field :email %></div>
+  </div>
+  <div class="field-inquiry">
+    <div class="inquiry-left"><%= f.label :num_tenants, "How many tenants (including yourself)" %></div>
+    <div class="inquiry-right"><%= f.text_field :num_tenants %></div>
+  </div>
+  <div class="field-inquiry">
+    <div class="inquiry-left"><%= f.label :relation_tenants, "Please specify relation of tenants (if applies)" %></div>
+    <div class="inquiry-right"><%= f.text_field :relation_tenants %></div>
+  </div>
+  <div class="field-inquiry">
+    <div class="inquiry-left"><%= f.label :inquiry_notes, "Message to listing agent (optional)" %></div>
+    <div class="inquiry-right"><%= f.text_area :inquiry_notes %></div>
+  </div>
 
 
-
-  <%= f.submit "UPDATE", class: 'btn btn-info btn-md' %>
+  <div class="middlebutton"><%= f.submit "UPDATE", class: 'btn btn-info btn-md' %></div>
 
 
 <% end  %>
-</p>
+
+</div>

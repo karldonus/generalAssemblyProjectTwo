@@ -1,23 +1,18 @@
 <h2>Available Rentals <% if user_signed_in? %><%= link_to "NEW", new_rental_path, class: 'btn btn-primary btn-md'%><% end %></h2>
 
-
-<table class="table table-bordered table-striped table-hover">
-  <thead>
-    <tr>
-      <th>Property Name</th>
-      <th>Location</th>
-      <th>Monthly Rent</th>
-      <th>Preview</th>
-    </tr>
-  </thead>
-<tbody>
   <% @rentals.each do |rental| %>
-    <tr>
-      <td><%= link_to(rental.property_name, rental_path(rental))%></td>
-      <td><%= rental.city%></td>
-      <td><%= rental.monthly_rent%></td>
-      <td><%= link_to((image_tag rental.image.url(:thumb)), rental_path(rental))%></td>
-    </tr>
+
+      <div class="home-container">
+          <div class="home-left">
+              <%= link_to (image_tag rental.image.url(:thumb)), rental_path(rental)%>
+          </div>
+
+          <div class="home-right">
+            <h2><%= link_to(rental.property_name, rental_path(rental))%></h2>
+            <div>Neighborhood: <%= rental.city%></div>
+            <div>Rent: <%= rental.monthly_rent%></div>
+            <div>Bed: <%= rental.bed_num%> & Bath: <%= rental.bath_num%></div>
+
+          </div>
+      </div>
   <% end %>
-</tbody>
-</table>

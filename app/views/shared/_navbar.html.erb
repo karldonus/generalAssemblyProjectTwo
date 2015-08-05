@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -20,10 +20,11 @@
         <li><li>
         <% if user_signed_in? %><%= link_to("Inquiry Tracker", inquiries_path(@inquiries))%><% end %>
         </li></a></li>
-  
+
       </ul>
       <!-- Right Nav -->
       <ul class="nav navbar-nav navbar-right">
+
         <li><li>
         <% if user_signed_in? == false %>
         <%= link_to("Login", new_user_registration_path) %>

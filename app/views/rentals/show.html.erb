@@ -1,10 +1,8 @@
 
 <h2><%= @rental.property_name %></h2>
-<h3>Public Info</h3>
+<div class="roundedpicture"><%= image_tag @rental.image.url(:large)%></div>
 
-<%= image_tag @rental.image.url(:large)%>
-
-<p class="publicRentalInfo">
+<div class="publicRentalInfo">
   <ul>Agent: <%= @rental.agent %></ul>
   <ul>Address: <%= @rental.address %>, <%= @rental.city %>, <%= @rental.state %>, <%= @rental.zipcode %></ul>
 
@@ -13,7 +11,7 @@
   <ul>Number of Baths: <%= @rental.bath_num %></ul>
   <ul>Availability Date: <%= @rental.availability_date %></ul>
   <ul>Listing Notes: <%= @rental.listing_notes %></ul>
-</p>
+</div>
 
 <% if user_signed_in? %>
   <h3>Realtor Only <%= link_to edit_rental_path(@rental), class: 'btn btn-info btn-md' do %>
@@ -27,33 +25,63 @@
   </p>
 <% end %>
 
-<h3>Interested? Inquire Below</h3>
+<div class="inquiry-form">
+  <div class="middlebutton"><h3>Interested? Inquire Below</h3></div>
 
-<%= form_for([@rental, Inquiry.new]) do |f| %>
+  <%= form_for([@rental, Inquiry.new]) do |f| %>
+    <div class="field-inquiry">
+      <div class="inquiry-left"><%= f.label :first_name, "First Name" %></div>
+      <div class="inquiry-right"><%= f.text_field :first_name %></div>
+    </div>
+    <div class="field-inquiry">
+      <div class="inquiry-left"><%= f.label :last_name, "Last Name" %></div>
+      <div class="inquiry-right"><%= f.text_field :last_name %></div>
+    </div>
+    <div class="field-inquiry">
+      <div class="inquiry-left"><%= f.label :credit_score, "Credit Score" %></div>
+      <div class="inquiry-right"><%= f.text_field :credit_score %>
+      <%= link_to "https://www.creditkarma.com/", target: "_blank", class: 'btn btn-success btn-xs' do %>
+      <i class="glyphicon glyphicon-search"></i><%end%></div>
+    </div>
+    <div class="field-inquiry">
+      <div class="inquiry-left"><%= f.label :num_pets, "Number of Pets" %></div>
+      <div class="inquiry-right"><%= f.text_field :num_pets %></div>
+    </div>
+    <div class="field-inquiry">
+      <div class="inquiry-left"><%= f.label :explain_pets, "Please specify breed, weight, etc (if applies)" %></div>
+      <div class="inquiry-right"><%= f.text_area :explain_pets %></div>
+    </div>
+    <div class="field-inquiry">
+      <div class="inquiry-left"><%= f.label :phone, "Primary Phone Number" %></div>
+      <div class="inquiry-right"><%= f.text_field :phone %></div>
+    </div>
+    <div class="field-inquiry">
+      <div class="inquiry-left"><%= f.label :email, "Primary Email" %></div>
+      <div class="inquiry-right"><%= f.text_field :email %></div>
+    </div>
+    <div class="field-inquiry">
+      <div class="inquiry-left-special"><%= f.label :num_tenants, "How many tenants (including yourself)" %></div>
+      <div class="inquiry-right"><%= f.text_field :num_tenants %></div>
+    </div>
 
-  <%= f.label :first_name, "First Name" %>
-  <%= f.text_field :first_name %>
-  <%= f.label :last_name, "Last Name" %>
-  <%= f.text_field :last_name %>
-  <%= f.label :credit_score, "Credit Score" %>
-    <%= link_to "https://www.creditkarma.com/", target: "_blank", class: 'btn btn-success btn-xs' do %>
-    <i class="glyphicon glyphicon-search"></i><%end%>
-  <%= f.text_field :credit_score %>
-  <%= f.label :num_pets, "Number of Pets" %>
-  <%= f.text_field :num_pets %>
-  <%= f.label :explain_pets, "Please specify breed, weight, etc (if applies)" %>
-  <%= f.text_area :explain_pets %>
-  <%= f.label :phone, "Primary Phone Number" %>
-  <%= f.text_field :phone %>
-  <%= f.label :email, "Primary Email" %>
-  <%= f.text_field :email %>
-  <%= f.label :num_tenants, "How many tenants (including yourself)" %>
-  <%= f.text_field :num_tenants %>
-  <%= f.label :relation_tenants, "Please specify relation of tenants (if applies)" %>
-  <%= f.text_field :relation_tenants %>
-  <%= f.label :inquiry_notes, "Message to listing agent (optional)" %>
-  <%= f.text_area :inquiry_notes %>
-  <%= f.submit "SUBMIT", class: 'btn btn-danger btn-md'%>
+    <div class="field-inquiry">
+      <div class="inquiry-left"><%= f.label :relation_tenants, "Explain relation of tenants" %></div>
+      <div class="inquiry-right"><%= f.text_area :relation_tenants %></div>
+    </div>
 
-<% end  %>
-</p>
+    <div class="field-inquiry">
+      <div class="inquiry-left"><%= f.label :inquiry_notes, "Message to listing agent (optional)" %></div>
+      <div class="inquiry-right"><%= f.text_area :inquiry_notes %></div>
+    </div>
+
+
+
+
+
+
+    <div class="middlebutton">
+    <%= f.submit "SUBMIT", class: 'btn btn-danger btn-md'%>
+    </div>
+
+  <% end  %>
+</div>
