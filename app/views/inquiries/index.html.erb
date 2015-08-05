@@ -1,11 +1,23 @@
 <h2>Inquiry Tracker</h2>
 
-<ul>
+<table class="table table-bordered table-striped table-hover">
+  <thead>
+    <tr>
+      <th>More Info</th>
+      <th>Inquiry Name</th>
+      <th>Credit Score</th>
+      <th>Qualification</th>
+    </tr>
+  </thead>
+<tbody>
   <% @inquiries.each do |inquiry| %>
-    <p>
-  <%= link_to("More Info", inquiry_path(inquiry))%> Name: <%= inquiry.first_name %>
-  <%= inquiry.last_name %> || Credit Score: <%= inquiry.credit_score %>
-  || Qualification: <%= inquiry.qualification %>
-    </p>
+    <tr>
+      <td><%= link_to inquiry_path(inquiry), class: 'btn btn-success' do%>
+        <i class="glyphicon glyphicon-search"></i><%end%></td>
+      <td><%= inquiry.first_name %> <%= inquiry.last_name %></td>
+      <td><%= inquiry.credit_score %></td>
+      <td><%= inquiry.qualification %></td>
+    </tr>
   <% end %>
-</ul>
+</tbody>
+</table>

@@ -1,11 +1,13 @@
-<h2>Available Rentals <% if user_signed_in? %><%= link_to image_tag("plus-circle.png", size: "20"), new_rental_path%><% end %></h2>
+<h2>Available Rentals <% if user_signed_in? %><%= link_to "NEW", new_rental_path, class: 'btn btn-primary btn-md'%><% end %></h2>
 
-<table>
+
+<table class="table table-bordered table-striped table-hover">
   <thead>
     <tr>
       <th>Property Name</th>
       <th>Location</th>
       <th>Monthly Rent</th>
+      <th>Preview</th>
     </tr>
   </thead>
 <tbody>

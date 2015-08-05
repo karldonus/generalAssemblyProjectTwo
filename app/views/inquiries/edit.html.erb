@@ -4,6 +4,6 @@
 <br>
 <br>
 <br>
-<%= form_for(@inquiry, method: :delete) do |f| %>
-  <%= f.submit "Delete Inquiry"%>
+<%= form_for(@inquiry, method: :delete, data: { confirm: 'Are you sure?' }) do |f| %>
+  <%= f.submit "DELETE", class: 'btn btn-danger btn-md' %>
 <% end %>

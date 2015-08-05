@@ -2,6 +2,6 @@
 
 <%= render partial: "form" %>
 
-<%= form_for(@rental, method: :delete) do |f| %>
-  <%= f.submit "Delete Rental"%>
+<%= form_for(@rental, method: :delete, data: { confirm: 'Are you sure?' }) do |f| %>
+  <%= f.submit "DELETE", class: 'btn btn-danger btn-md' %>
 <% end %>
