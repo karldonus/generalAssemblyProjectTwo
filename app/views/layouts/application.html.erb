@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>LemaitreRentals</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <script type="text/javascript" src="/path/to/jquery-latest.js"></script>
-  <script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script>
-</head>
-<body>
-  <%= render 'shared/navbar' %>
-
-    <div class="container-site">
-    <%= yield %>
-    <div class="flash-notice">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    </div>
-    </div>
-<footer>
-
-</footer>
-</body>
+  <head>
+    <title>LemaitreRentals</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= render 'shared/navbar' %>
+      <div class="container-site">
+        <div class="flash-notice">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+        </div>
+        <%= yield %>
+      </div>
+    <footer>
+    </footer>
+  </body>
 </html>

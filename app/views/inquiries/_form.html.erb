@@ -1,14 +1,14 @@
 <div class="inquiry-form">
 <%= form_for([@inquiry]) do |f| %>
   <div class="field-inquiry">
-  <%= f.radio_button(:qualification, "Strong Candidate") %>
-  <%= label(:qualification, "Strong Candidate") %>
-  <%= f.radio_button(:qualification, "Fair Candidate") %>
-  <%= label(:qualification, "Fair Candidate") %>
-  <%= f.radio_button(:qualification, "Weak Candidate") %>
-  <%= label(:qualification, "Weak Candidate") %>
-  <%= f.radio_button(:qualification, "None") %>
-  <%= label(:qualification, "None") %>
+    <%= f.radio_button(:qualification, "Strong Candidate") %>
+      <%= label(:qualification, "Strong Candidate") %>
+    <%= f.radio_button(:qualification, "Fair Candidate") %>
+      <%= label(:qualification, "Fair Candidate") %>
+    <%= f.radio_button(:qualification, "Weak Candidate") %>
+      <%= label(:qualification, "Weak Candidate") %>
+    <%= f.radio_button(:qualification, "None") %>
+      <%= label(:qualification, "None") %>
   </div>
   <div class="field-inquiry">
     <div class="inquiry-left"><%= f.label :admin_notes, "Agent Notes" %></div>
@@ -27,7 +27,7 @@
     <div class="inquiry-right"><%= f.text_field :credit_score %></div>
   </div>
   <div class="field-inquiry">
-    <div class="inquiry-left"><%= f.label :num_pets, "Numbe of Pets" %></div>
+    <div class="inquiry-left"><%= f.label :num_pets, "Number of Pets" %></div>
     <div class="inquiry-right"><%= f.text_field :num_pets %></div>
   </div>
   <div class="field-inquiry">
@@ -54,11 +54,6 @@
     <div class="inquiry-left"><%= f.label :inquiry_notes, "Message to listing agent (optional)" %></div>
     <div class="inquiry-right"><%= f.text_area :inquiry_notes %></div>
   </div>
-
-
   <div class="middlebutton"><%= f.submit "UPDATE", class: 'btn btn-info btn-md' %></div>
-
-
 <% end  %>
-
 </div>

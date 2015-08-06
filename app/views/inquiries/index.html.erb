@@ -1,28 +1,27 @@
 <% if user_signed_in? %>
   <% if current_user.privilege == 2 || current_user.privilege == 3  %>
 
-<h2>Inquiry Tracker</h2>
-
-<table class="table table-bordered table-striped table-hover">
-  <thead>
-    <tr>
-      <th>More Info</th>
-      <th>Inquiry Name</th>
-      <th>Credit Score</th>
-      <th>Qualification</th>
-    </tr>
-  </thead>
-<tbody>
-  <% @inquiries.each do |inquiry| %>
-    <tr>
-      <td><%= link_to inquiry_path(inquiry), class: 'btn btn-success' do%>
-        <i class="glyphicon glyphicon-search"></i><%end%></td>
-      <td><%= inquiry.first_name %> <%= inquiry.last_name %></td>
-      <td><%= inquiry.credit_score %></td>
-      <td><%= inquiry.qualification %></td>
-    </tr>
+    <h2>Inquiry Tracker</h2>
+    <table class="table table-bordered table-striped table-hover">
+      <thead>
+        <tr>
+          <th>More Info</th>
+          <th>Inquiry Name</th>
+          <th>Credit Score</th>
+          <th>Qualification</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @inquiries.each do |inquiry| %>
+          <tr>
+            <td><%= link_to inquiry_path(inquiry), class: 'btn btn-success' do%>
+              <i class="glyphicon glyphicon-search"></i><%end%></td>
+            <td><%= inquiry.first_name %> <%= inquiry.last_name %></td>
+            <td><%= inquiry.credit_score %></td>
+            <td><%= inquiry.qualification %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   <% end %>
-</tbody>
-</table>
-  <% end %>
-    <% end %>
+<% end %>

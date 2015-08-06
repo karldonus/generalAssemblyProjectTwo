@@ -1,13 +1,11 @@
 <% if user_signed_in? %>
   <% if current_user.privilege == 2 || current_user.privilege == 3  %>
-<h2>Edit Inquiry Record</h2>
+    <h2>Edit Inquiry Record</h2>
 
-<%= render partial: "form" %>
-<br>
-<br>
-<br>
-<%= form_for(@inquiry, method: :delete, data: { confirm: 'Are you sure?' }) do |f| %>
-  <%= f.submit "DELETE", class: 'btn btn-danger btn-md' %>
-<% end %>
-<% end %>
+    <%= render partial: "form" %>
+
+    <%= form_for(@inquiry, method: :delete, data: { confirm: 'Are you sure?' }) do |f| %>
+      <%= f.submit "DELETE", class: 'btn btn-danger btn-md' %>
+    <% end %>
+  <% end %>
 <% end %>

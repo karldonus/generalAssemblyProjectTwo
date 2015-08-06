@@ -1,12 +1,9 @@
 <% if user_signed_in? %>
   <% if current_user.privilege == 2 || current_user.privilege == 3  %>
-
-<h2>Edit Rental</h2>
-
-<%= render partial: "form" %>
-
-<%= form_for(@rental, method: :delete, data: { confirm: 'Are you sure?' }) do |f| %>
-  <%= f.submit "DELETE", class: 'btn btn-danger btn-md' %>
-<% end %>
-<%end%>
+    <h2>Edit Rental</h2>
+    <%= render partial: "form" %>
+    <%= form_for(@rental, method: :delete, data: { confirm: 'Are you sure?' }) do |f| %>
+      <%= f.submit "DELETE", class: 'btn btn-danger btn-md' %>
+    <% end %>
+  <%end%>
 <%end%>

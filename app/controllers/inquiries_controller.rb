@@ -10,6 +10,7 @@ class InquiriesController < ApplicationController
     @inquiry = @rental.inquiries.create(inquiry_params)
 
     redirect_to rental_path(@rental)
+    flash[:notice] = "Thank you for your interest!"
   end
 
   def show
