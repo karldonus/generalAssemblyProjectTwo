@@ -18,13 +18,18 @@ h4 {
     line-height: 1.2
 }
 
+.flash-notice{
+  text-align: center;
+  color:red;
+}
+
 .home-container{
 margin:10px auto;
 padding:10px;
 overflow:hidden;
 float:left;
 display:flex;
-background-color: #444;
+background-color: black;
 border-radius: 5px;
 color: white;
 justify-content: center;
@@ -54,8 +59,6 @@ a {
   height: 80px;
 }
 
-
-
 .inquiry-left {
   margin-top: 4px;
   padding-bottom: 10px;
@@ -77,8 +80,20 @@ a {
   padding-bottom: 10px;
   width: 50%;
   float: right;
+  color: black;
 }
 
+textarea{
+  resize: none;
+  color: black;
+}
+input[type=text]{
+  color: black;
+}
+
+.container-site{
+  margin-top: 100px;
+}
 
 .home-left{
 float:left;
@@ -105,8 +120,6 @@ width:65%;
   color: white;
   position: relative;}
 
-
-
 footer {
    position:fixed;
    left:0px;
@@ -119,12 +132,9 @@ footer {
 }
 
 .jumbotron {
-
-    margin-bottom: 0px;
+    margin-top: 100px;
+    margin-bottom: 20px;
     background-color: #89CFF0;
-    background-position: 0% 25%;
-    background-size: cover;
-    background-repeat: no-repeat;
     color: white;
     text-align: center;
     text-shadow: black 0.3em 0.3em 0.3em;

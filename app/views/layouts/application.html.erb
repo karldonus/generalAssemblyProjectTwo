@@ -9,11 +9,13 @@
 <body>
   <%= render 'shared/navbar' %>
 
-<div class="flash-notice">
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-</div>
+    <div class="container-site">
     <%= yield %>
+    <div class="flash-notice">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    </div>
+    </div>
 <footer>
 
 </footer>
