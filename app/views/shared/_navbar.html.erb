@@ -16,25 +16,25 @@
       <ul class="nav navbar-nav">
         <li class="active"><li>
         <%= link_to("Available Properties", rentals_path(@rental))%>
-        </li><span class="sr-only">(current)</span></a></li>
-        <li><li>
+        </li></li>
+        <li>
           <% if user_signed_in? %>
             <% if current_user.privilege == 2 || current_user.privilege == 3  %>
               <%= link_to("Inquiry Tracker", inquiries_path(@inquiries))%><% end %><%end%>
-        </li></a></li>
+        </li>
 
       </ul>
       <!-- Right Nav -->
       <ul class="nav navbar-nav navbar-right">
 
-        <li><li>
+        <li>
         <% if user_signed_in? == false %>
         <%= link_to("Login", new_user_registration_path) %>
         <% end %>
         <% if user_signed_in? %>
         <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
         <% end %>
-        </li></a></li>
+        </li>
       </ul>
 
     </div><!-- /.navbar-collapse -->
