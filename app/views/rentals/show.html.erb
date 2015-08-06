@@ -14,6 +14,7 @@
 </div>
 
 <% if user_signed_in? %>
+  <% if current_user.privilege == 2 || current_user.privilege == 3  %>
   <h3>Realtor Only <%= link_to edit_rental_path(@rental), class: 'btn btn-info btn-md' do %>
     <i class="glyphicon glyphicon-pencil"></i><% end %></h3>
   <p class="agentRentalInfo">
@@ -23,6 +24,7 @@
     <ul>Client Email: <%= @rental.client_email %></ul>
     <ul>Agent Notes: <%= @rental.admin_notes %></ul>
   </p>
+  <% end %>
 <% end %>
 
 <div class="inquiry-form">

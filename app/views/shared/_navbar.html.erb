@@ -18,7 +18,9 @@
         <%= link_to("Available Properties", rentals_path(@rental))%>
         </li><span class="sr-only">(current)</span></a></li>
         <li><li>
-        <% if user_signed_in? %><%= link_to("Inquiry Tracker", inquiries_path(@inquiries))%><% end %>
+          <% if user_signed_in? %>
+            <% if current_user.privilege == 2 || current_user.privilege == 3  %>
+              <%= link_to("Inquiry Tracker", inquiries_path(@inquiries))%><% end %><%end%>
         </li></a></li>
 
       </ul>
