@@ -1,146 +1,136 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-
-body {
-    margin: 40px auto;
-    max-width: 650px;
-    line-height: 1.6;
-    font-size: 18px;
-    color: #444;
-    background-color: lemonchiffon;
-    padding: 0 10px
-}
-h1,
-h2,
-h3,
-h4 {
-    line-height: 1.2
-}
-
-.flash-notice{
-  text-align: center;
-  color:red;
-  margin-top: 60px;
-}
-
-.home-container{
-margin:10px auto;
-padding:10px;
-overflow:hidden;
-float:left;
-display:flex;
-background-color: black;
-border-radius: 5px;
-color: white;
-justify-content: center;
-width: 100%;
-}
+@import url(http://fonts.googleapis.com/css?family=Montserrat+Subrayada);
 
 a {
   color: inherit;
 }
+body {
+  background-color: lemonchiffon;
+  color: #444;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 40px auto;
+  max-width: 650px;
+  padding: 0 10px;
+  }
+footer {
+  background: rgba(216,3,3,.9);
+  border-top-color: white;
+  border-top-style: solid;
+  border-top-width: 1px;
+  bottom:0px;
+  color: white;
+  font-size: 12px;
+  height:30px;
+  left:0px;
+  padding-right: 15px;
+  padding-top: 5px;
+  position:fixed;
+  text-align: right;
+  width:100%;
+  }
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2
+}
+input[type=text]{
+  color: black;
+}
+textarea{
+  color: black;
+  resize: none;
+}
 
+.field-inquiry{
+  height: 80px;
+  margin: 10px 0 10px 0;
+}
+.flash-notice{
+  color:red;
+  margin-top: 60px;
+  text-align: center;
+}
+.home-container{
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  display:flex;
+  float:left;
+  justify-content: center;
+  margin:10px auto;
+  overflow:hidden;
+  padding:10px;
+  width: 100%;
+}
+.home-image{
+  text-align: center;
+}
+.home-left{
+  float:left;
+  width:35%;
+}
+.home-right{
+  float:left;
+  width:65%;
+}
+.inquiry-form {
+  background-color: black;
+  border-radius: 15px;
+  color: white;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+.inquiry-left {
+  float: left;
+  margin-top: 4px;
+  padding-bottom: 10px;
+  text-align: right;
+  width: 50%;
+}
+.inquiry-left-special {
+  float: left;
+  margin-top: -10px;
+  padding-bottom: 10px;
+  text-align: right;
+  width: 50%;
+}
+.inquiry-right {
+  color: black;
+  float: right;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  width: 50%;
+}
+.jumbotron {
+  background-color: #89CFF0;
+  border-radius: 16px;
+  color: white;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: black 0.3em 0.3em 0.3em;
+}
 .middlebutton{
   float: center;
   padding: 15px;
   text-align: center;
 }
-
-.inquiry-form {
-  background-color: black;
-  padding: 15px;
-  border-radius: 5px;
-  color: white;
-  margin-bottom: 15px;
-}
-
-
-.field-inquiry{
-  margin: 10px 0 10px 0;
-  height: 80px;
-}
-
-.inquiry-left {
-  margin-top: 4px;
-  padding-bottom: 10px;
-  width: 50%;
-  float: left;
-  text-align: right;
-}
-
-.inquiry-left-special {
-  margin-top: -10px;
-  padding-bottom: 10px;
-  width: 50%;
-  float: left;
-  text-align: right;
-}
-
-.inquiry-right {
-  padding-left: 15px;
-  padding-bottom: 10px;
-  width: 50%;
-  float: right;
-  color: black;
-}
-
-textarea{
-  resize: none;
-  color: black;
-}
-input[type=text]{
-  color: black;
-}
-
-
-.home-left{
-float:left;
-width:35%;
-}
-
-.home-right{
-float:left;
-width:65%;
-}
-
-.home-image{
-  text-align: center;
-}
-
 .roundedpicture {
-  margin:10px auto;
-  text-align: center;
-  padding:10px;
-  overflow:hidden;
-  float: center;
   background-color: black;
   border-radius: 5px;
   color: white;
-  position: relative;}
-
-footer {
-   position:fixed;
-   left:0px;
-   bottom:0px;
-   height:30px;
-   width:100%;
-   color: lemonchiffon;
-   background: rgba(216,3,3,.9);
-   text-align: right;
+  float: center;
+  margin:10px auto;
+  overflow:hidden;
+  padding:10px;
+  position: relative;
+  text-align: center;
 }
 
-.jumbotron {
-    margin-top: 100px;
-    margin-bottom: 20px;
-    background-color: #89CFF0;
-    color: white;
-    text-align: center;
-    text-shadow: black 0.3em 0.3em 0.3em;
-    border-radius: 16px;
-}
-
-/* navbar */
+/* NAV BAR BOOTSTRAP*/
 .navbar-default {
     background: rgba(216,3,3,.9);
     border-color: #E7E7E7;
@@ -148,6 +138,7 @@ footer {
 /* title */
 .navbar-default .navbar-brand {
     color: white;
+    font-family: 'Montserrat Subrayada', sans-serif;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
