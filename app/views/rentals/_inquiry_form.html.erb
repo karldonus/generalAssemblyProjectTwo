@@ -1,0 +1,51 @@
+<div class="inquiry-form">
+  <div class="middlebutton"><h3>Interested? Inquire Below</h3></div>
+  <%= form_for([@rental, Inquiry.new]) do |f| %>
+    <div class="field-inquiry">
+      <div class="inquiry-left"><%= f.label :first_name, "First Name*" %></div>
+      <div class="inquiry-right"><%= f.text_field :first_name, :required => true %></div>
+    </div>
+    <div class="field-inquiry">
+      <div class="inquiry-left"><%= f.label :last_name, "Last Name*" %></div>
+      <div class="inquiry-right"><%= f.text_field :last_name, :required => true%></div>
+    </div>
+    <div class="field-inquiry">
+      <div class="inquiry-left"><%= f.label :credit_score, "Credit Score*" %></div>
+      <div class="inquiry-right"><%= f.text_field :credit_score, :required => true %>
+        <%= link_to "https://www.creditkarma.com/", target: "_blank", class: 'btn btn-success btn-xs' do %>
+        <i class="glyphicon glyphicon-search"></i><%end%></div>
+    </div>
+    <div class="field-inquiry">
+      <div class="inquiry-left"><%= f.label :num_pets, "Number of Pets*" %></div>
+      <div class="inquiry-right"><%= f.text_field :num_pets, :required => true %></div>
+    </div>
+    <div class="field-inquiry">
+      <div class="inquiry-left"><%= f.label :explain_pets, "Please specify breed, weight, etc" %></div>
+      <div class="inquiry-right"><%= f.text_area :explain_pets %></div>
+    </div>
+    <div class="field-inquiry">
+      <div class="inquiry-left"><%= f.label :phone, "Primary Phone Number*" %></div>
+      <div class="inquiry-right"><%= f.text_field :phone, :required => true %></div>
+    </div>
+    <div class="field-inquiry">
+      <div class="inquiry-left"><%= f.label :email, "Primary Email*" %></div>
+      <div class="inquiry-right"><%= f.text_field :email, :required => true %></div>
+    </div>
+    <div class="field-inquiry">
+      <div class="inquiry-left-special"><%= f.label :num_tenants, "How many tenants (including yourself)*" %></div>
+      <div class="inquiry-right"><%= f.text_field :num_tenants, :required => true %></div>
+    </div>
+    <div class="field-inquiry">
+      <div class="inquiry-left"><%= f.label :relation_tenants, "Explain relation of tenants (if applicable)" %></div>
+      <div class="inquiry-right"><%= f.text_area :relation_tenants %></div>
+    </div>
+
+    <div class="field-inquiry">
+      <div class="inquiry-left"><%= f.label :inquiry_notes, "Message to listing agent (optional)" %></div>
+      <div class="inquiry-right"><%= f.text_area :inquiry_notes %></div>
+    </div>
+  <div class="middlebutton">
+    <%= f.submit "SUBMIT", class: 'btn btn-danger btn-md'%>
+  </div>
+  <% end  %>
+</div>
