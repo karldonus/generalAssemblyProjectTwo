@@ -1,26 +1,37 @@
 <h2><%= @rental.property_name %></h2>
-  <div class="roundedpicture"><%= image_tag @rental.image.url(:large)%></div>
-  <div class="publicRentalInfo">
-    <ul>Agent: <%= @rental.agent %></ul>
-    <ul>Address: <%= @rental.address %>, <%= @rental.city %>, <%= @rental.state %>, <%= @rental.zipcode %></ul>
-    <ul>Monthly Rent: <%= @rental.monthly_rent %></ul>
-    <ul>Number of Beds: <%= @rental.bed_num%></ul>
-    <ul>Number of Baths: <%= @rental.bath_num %></ul>
-    <ul>Availability Date: <%= @rental.availability_date %></ul>
-    <ul>Listing Notes: <%= @rental.listing_notes %></ul>
+  <div class="roundedrentalpicture"><%= image_tag @rental.image.url, class: "imgfit"%></div>
+    <div class="rentalInfo">
+      <div class="publicRentalInfoText">
+      <div class="pills-rental-info">Agent: <%= @rental.agent %></div>
+      <div class="pills-rental-info">Address: <%= @rental.address %></div>
+      <div class="pills-rental-info"><%= @rental.city %>, <%= @rental.state %>, <%= @rental.zipcode %></div>
+      <div class="pills-rental-info">Monthly Rent: <%= @rental.monthly_rent %></div>
+      <div class="pills-rental-info">Number of Beds: <%= @rental.bed_num%></div>
+      <div class="pills-rental-info">Number of Baths: <%= @rental.bath_num %></div>
+      <div class="pills-rental-info">Availability Date: <%= @rental.availability_date %></div>
+      <div class="pills-rental-info">Listing Notes: <%= @rental.listing_notes %></div>
+    </div>
+    <div class="publicRentalInfoMap">
+      <iframe width='100%' height='100%' frameBorder='1px' src='https://a.tiles.mapbox.com/v4/karldonus.72471d5f/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1Ijoia2FybGRvbnVzIiwiYSI6Ijg1ZTY5ZDZjMTUxZTdkMzk1Y2MwOTNjNjQwZDMwNTU2In0.WOrmvw7P5KviJbR_u5febw'>></iframe>    </div>
   </div>
-
   <% if user_signed_in? %>
     <% if current_user.privilege == 2 || current_user.privilege == 3  %>
-      <h3>Realtor Only <%= link_to edit_rental_path(@rental), class: 'btn btn-info btn-md' do %>
-        <i class="glyphicon glyphicon-pencil"></i><% end %></h3>
-          <div class="agentRentalInfo">
-            <ul>Posted <%= time_ago_in_words(@rental.created_at) %> ago</ul>
-            <ul>Client Name: <%= @rental.client_name %></ul>
-            <ul>Client Phone: <%= @rental.client_phone %></ul>
-            <ul>Client Email: <%= @rental.client_email %></ul>
-            <ul>Agent Notes: <%= @rental.admin_notes %></ul>
+      <div class="realtor-only">
+        <div class="realtor-only-left">
+      <h3>Realtor Only </h3>
+      </div>
+          <div class="realtor-only-center">
+            <div class="pills-rental-info">Posted <%= time_ago_in_words(@rental.created_at) %> ago</div>
+            <div class="pills-rental-info">Client Name: <%= @rental.client_name %></div>
+            <div class="pills-rental-info">Client Phone: <%= @rental.client_phone %></div>
+            <div class="pills-rental-info">Client Email: <%= @rental.client_email %></div>
+            <div class="pills-rental-info">Agent Notes: <%= @rental.admin_notes %></div>
           </div>
+      <div class="home-right-right">
+        <%= link_to edit_rental_path(@rental), class: 'btn btn-info btn-md' do %>
+          <i class="glyphicon glyphicon-pencil"></i><% end %>
+      </div>
+      </div>
     <% end %>
   <% end %>
 

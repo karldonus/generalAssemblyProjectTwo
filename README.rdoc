@@ -13,3 +13,30 @@ through inquiries to identify solid leads.
 
 MVP Solution: Build rental inquiry driven web app. See user stories in planning
 directory.
+
+
+Features to Implement
+
+	 =>Inquiry Tracker Sortable Table
+
+   =>Strengthened Authorization Methodology
+
+   =>Upload Multiple Photos Thru AWS/PaperClip
+
+   =>Add Mini Google Map in Rental Show Page
+
+   =>Add SideBar Search Params for Rental Index
+
+   =>Add SideBar Featuring Similar Properties
+
+   =>Add About Me Section
+
+   =>Add Content Marketing (Blog) Section
+
+   =>View Photos in Carousel/LightBox
+
+   =>Redo Graphics to Red/White/Blue Theme
+
+   =>Add Social Media Buttons
+
+   =>Refactor Thru More Helpers

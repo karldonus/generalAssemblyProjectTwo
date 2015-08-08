@@ -5,10 +5,15 @@
         <%= link_to (image_tag rental.image.url(:thumb)), rental_path(rental)%>
       </div>
       <div class="home-right">
-        <h2><%= link_to(rental.property_name, rental_path(rental))%></h2>
-          <div>Neighborhood: <%= rental.city%></div>
-          <div><%= rental.bed_num%> Bed & <%= rental.bath_num%> Bath</div>
-          <div><%= rental.monthly_rent%> Per Month</div>
+        <h2 class="pills-rental-info"><%= rental.property_name%></h2>
+          <div class="pills-rental-info">Neighborhood: <%= rental.city%></div>
+          <div class="pills-rental-info"><%= rental.bed_num%> Bed & <%= rental.bath_num%> Bath</div>
+          <div class="pills-rental-info"><%= rental.monthly_rent%> Per Month</div>
       </div>
+      <div class="home-right-right">
+        <%= link_to rental_path(rental), class: 'btn btn-success' do%>
+          <i class="glyphicon glyphicon-search"></i><%end%>
+      </div>
+
     </div>
   <% end %>

@@ -34,7 +34,7 @@ h1,
 h2,
 h3,
 h4 {
-  line-height: 1.2
+  line-height: 1.2;
 }
 input[type=text]{
   color: black;
@@ -54,11 +54,11 @@ textarea{
   text-align: center;
 }
 .home-container{
+  align-items: center;
   background-color: black;
   border-radius: 5px;
   color: white;
   display:flex;
-  float:left;
   justify-content: center;
   margin:10px auto;
   overflow:hidden;
@@ -74,7 +74,17 @@ textarea{
 }
 .home-right{
   float:left;
-  width:65%;
+  width:55%;
+  text-align: center;
+
+}
+.home-right-right{
+  float:left;
+  width:10%;
+}
+
+.imgfit{
+  width: 100%;
 }
 .inquiry-form {
   background-color: black;
@@ -105,7 +115,7 @@ textarea{
   width: 50%;
 }
 .jumbotron {
-  background-color: #89CFF0;
+  background-color: black;
   border-radius: 16px;
   color: white;
   margin-top: 100px;
@@ -118,9 +128,69 @@ textarea{
   padding: 15px;
   text-align: center;
 }
-.roundedpicture {
-  background-color: black;
+.pills-rental-info {
+  background-color: rgba(216,3,3,.9);
+  padding: 3px 3px 3px 3px;
   border-radius: 5px;
+  margin: 4px 4px 4px 4px;
+  display: inline-flex;
+}
+.rentalInfo {
+  width: 100%;
+  padding: 10px 20px 10px 20px;
+  margin: 10px 0 10px 0;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.publicRentalInfoMap {
+  width: 40%;
+  float: right;
+  height: 250px;
+  display: flex;
+}
+.publicRentalInfoText {
+  width: 60%;
+  float: right;
+  text-align: center;
+  padding-right: 15px;
+}
+.realtor-only{
+  align-items: center;
+  background-color: black;
+  border-radius: 15px;
+  color: white;
+  display:flex;
+  justify-content: center;
+  margin:10px auto;
+  overflow:hidden;
+  padding:10px;
+  width: 100%;
+}
+.realtor-only-center{
+  float:left;
+  width:70%;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+}
+.realtor-only-left{
+  float:left;
+  width:20%;
+  text-align: center;
+
+}
+.realtor-only-right{
+  float:right;
+  width:10%;
+}
+
+.roundedrentalpicture {
+  background-color: black;
+  border-radius: 15px;
   color: white;
   float: center;
   margin:10px auto;
@@ -128,6 +198,8 @@ textarea{
   padding:10px;
   position: relative;
   text-align: center;
+  height: 100%;
+  max-width: 100%;
 }
 
 /* NAV BAR BOOTSTRAP*/
