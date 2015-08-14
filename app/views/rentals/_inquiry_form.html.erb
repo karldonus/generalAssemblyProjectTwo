@@ -1,5 +1,8 @@
 <div class="inquiry-form">
   <div class="middlebutton"><h3>Interested? Inquire Below</h3></div>
+
+  <%# AM: You can pass in classes to your form helpers. That might help de-clutter this view. %>
+
   <%= form_for([@rental, Inquiry.new]) do |f| %>
     <div class="field-inquiry">
       <div class="inquiry-left"><%= f.label :first_name, "First Name*" %></div>

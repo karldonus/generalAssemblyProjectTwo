@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 20150806141835) do
 
   add_index "inquiries", ["rental_id"], name: "index_inquiries_on_rental_id", using: :btree
 
+  # AM: This is a big table! Nothing wrong with that, but did you consider other ways to set up your schema (e.g., create a Client model)?
+
   create_table "rentals", force: :cascade do |t|
     t.string   "agent"
     t.string   "property_name"
