@@ -1,7 +1,15 @@
 
-<div class="jumbotron">
-  <h1>Welcome to Lynchburg Rentals</h1>
-  <p>Helping People Like You Find Their American Dream</p>
-  <p>One Home at a Time</p>
-  <p><%= link_to "Find Your American Dream", rentals_path(@rental), class: 'btn btn-danger' %></p>
-</div>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-2"><!--Column left--></div>
+        <div class="col-md-8">
+          <div class="jumbotron">
+            <h1>Welcome to Lynchburg Rentals</h1>
+            <p>Helping People Like You Find Their American Dream</p>
+            <p>One Home at a Time</p>
+            <p><%= link_to "Find Your American Dream", rentals_path(@rental), class: 'btn btn-danger' %></p>
+          </div>
+        </div>
+        <div class="col-md-2"><!--Column right--></div>
+    </div>
+  </div>

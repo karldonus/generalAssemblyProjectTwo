@@ -10,9 +10,6 @@ body {
   color: #444;
   font-size: 18px;
   line-height: 1.6;
-  margin: 40px auto;
-  max-width: 650px;
-  padding: 0 10px;
   }
 footer {
   background: rgba(216,3,3,.9);
@@ -35,6 +32,7 @@ h2,
 h3,
 h4 {
   line-height: 1.2;
+  text-align: center;
 }
 input[type=text]{
   color: black;
@@ -65,6 +63,12 @@ textarea{
   padding:10px;
   width: 100%;
 }
+.home-details{
+  width: 100%;
+}
+.home-header{
+  width: 100%;
+}
 .home-image{
   text-align: center;
 }
@@ -76,12 +80,13 @@ textarea{
   float:left;
   width:55%;
   text-align: center;
-
 }
 .home-right-right{
   float:left;
   width:10%;
 }
+
+
 
 .imgfit{
   width: 100%;
@@ -118,11 +123,24 @@ textarea{
   background-color: black;
   border-radius: 16px;
   color: white;
+  width: 100%;
   margin-top: 100px;
   margin-bottom: 20px;
   text-align: center;
   text-shadow: black 0.3em 0.3em 0.3em;
 }
+.gateway-container, .signup-container, .login-container {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+.login-field{
+  margin: .5em;
+}
+.gateway-container, .home-container, .home-show-container {
+  margin-bottom: 2em;
+}
+
 .middlebutton{
   float: center;
   padding: 15px;
@@ -134,6 +152,11 @@ textarea{
   border-radius: 5px;
   margin: 4px 4px 4px 4px;
   display: inline-flex;
+}
+.rental-index-bar {
+  background-color: black;
+  height: auto;
+  width: 30%;
 }
 .rentalInfo {
   width: 100%;
@@ -270,5 +293,58 @@ textarea{
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
         color: black;
+    }
+    .home-right{
+      width: 100%;
+      order: 3;
+    }
+    .home-left{
+      width: 100%;
+      align-items: center;
+      text-align: center;
+      order: 1;
+    }
+    .home-right-right{
+      display: none;
+    }
+    .home-container{
+      display: block;
+    }
+    .publicRentalInfoMap {
+      width: 100%;
+    }
+    .publicRentalInfoText {
+      width: 100%;
+      text-align: center;
+    }
+    .rentalInfo {
+      width: 100%;
+      display: inline-block;
+    }
+    .field-inquiry{
+      height: 80px;
+      margin: 10px 0 10px 0;
+      width: 100%;
+      display: inline-block;
+    }
+    .inquiry-left {
+      margin-top: 4px;
+      padding-bottom: 10px;
+      text-align: center;
+      width: 100%;
+    }
+    .inquiry-left-special {
+      margin: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+      width: 100%;
+    }
+    .inquiry-right {
+      color: black;
+      float: center;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      width: 100%;
+      text-align: center;
     }
 }

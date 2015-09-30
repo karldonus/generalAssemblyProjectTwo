@@ -1,3 +1,5 @@
+<div class="rental-index-container">
+
 <h2>Available Rentals <% if user_signed_in? %><% if current_user.privilege == 2 || current_user.privilege == 3  %><%= link_to "NEW", new_rental_path, class: 'btn btn-primary btn-md'%><%end%><% end %></h2>
   <% @rentals.each do |rental| %>
     <div class="home-container">
@@ -5,10 +7,14 @@
         <%= link_to (image_tag rental.image.url(:thumb)), rental_path(rental)%>
       </div>
       <div class="home-right">
-        <h2 class="pills-rental-info"><%= rental.property_name%></h2>
+        <div class="home-header">
+          <h2 class="pills-rental-info"><%= rental.property_name%></h2>
+        </div>
+        <div class="home-details">
           <div class="pills-rental-info">Neighborhood: <%= rental.city%></div>
           <div class="pills-rental-info"><%= rental.bed_num%> Bed & <%= rental.bath_num%> Bath</div>
           <div class="pills-rental-info"><%= rental.monthly_rent%> Per Month</div>
+        </div>
       </div>
       <div class="home-right-right">
         <%= link_to rental_path(rental), class: 'btn btn-success' do%>
@@ -17,3 +23,5 @@
 
     </div>
   <% end %>
+
+</div>
