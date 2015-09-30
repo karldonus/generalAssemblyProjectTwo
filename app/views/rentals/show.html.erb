@@ -13,7 +13,8 @@
         <div class="pills-rental-info">Listing Notes: <%= @rental.listing_notes %></div>
       </div>
       <div class="publicRentalInfoMap">
-        <iframe width='100%' height='100%' frameBorder='1px' src='https://a.tiles.mapbox.com/v4/karldonus.72471d5f/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1Ijoia2FybGRvbnVzIiwiYSI6Ijg1ZTY5ZDZjMTUxZTdkMzk1Y2MwOTNjNjQwZDMwNTU2In0.WOrmvw7P5KviJbR_u5febw'>></iframe>    </div>
+        <iframe width='100%' height='100%' frameBorder='1px' src='https://a.tiles.mapbox.com/v4/karldonus.72471d5f/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1Ijoia2FybGRvbnVzIiwiYSI6Ijg1ZTY5ZDZjMTUxZTdkMzk1Y2MwOTNjNjQwZDMwNTU2In0.WOrmvw7P5KviJbR_u5febw'>></iframe>
+      </div>
     </div>
     <% if user_signed_in? %>
       <% if current_user.privilege == 2 || current_user.privilege == 3  %>
