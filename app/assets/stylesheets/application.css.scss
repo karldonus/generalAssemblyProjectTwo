@@ -42,6 +42,12 @@ textarea{
   resize: none;
 }
 
+#map{
+  height: 50vh;
+  width: 50vh;
+  border: 2px solid #D8030C;
+}
+
 .field-inquiry{
   height: 80px;
   margin: 10px 0 10px 0;
@@ -85,11 +91,8 @@ textarea{
   float:left;
   width:10%;
 }
-
-
-
 .imgfit{
-  width: 100%;
+  width: 80vh;
 }
 .inquiry-form {
   background-color: black;
@@ -140,7 +143,12 @@ textarea{
 .gateway-container, .home-container, .home-show-container {
   margin-bottom: 2em;
 }
-
+.mapContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .middlebutton{
   float: center;
   padding: 15px;
@@ -170,12 +178,7 @@ textarea{
   align-items: center;
 }
 
-.publicRentalInfoMap {
-  width: 40%;
-  float: right;
-  height: 250px;
-  display: flex;
-}
+
 .publicRentalInfoText {
   width: 60%;
   float: right;
@@ -310,12 +313,16 @@ textarea{
     .home-container{
       display: block;
     }
+    .imgfit{
+      width: 50vh;
+    }
     .publicRentalInfoMap {
       width: 100%;
     }
     .publicRentalInfoText {
       width: 100%;
       text-align: center;
+      margin-bottom: 1em;
     }
     .rentalInfo {
       width: 100%;
