@@ -1,6 +1,5 @@
 $(document).ready(function(){
     var address = rentalAddress + "," + rentalCity + "," + rentalState;
-    alert(address);
     var url = "https://api.mapbox.com/v4/geocode/mapbox.places/" + address + ".json?access_token=pk.eyJ1Ijoia2FybGRvbnVzIiwiYSI6Ijg1ZTY5ZDZjMTUxZTdkMzk1Y2MwOTNjNjQwZDMwNTU2In0.WOrmvw7P5KviJbR_u5febw";
 
       $.getJSON(url).then(function(response){
