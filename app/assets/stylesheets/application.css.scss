@@ -47,7 +47,10 @@ textarea{
   width: 50vh;
   border: 2px solid #D8030C;
 }
-
+.delete-rental{
+  margin-bottom: 3em;
+  text-align: center;
+}
 .field-inquiry{
   height: 80px;
   margin: 10px 0 10px 0;
@@ -193,7 +196,7 @@ textarea{
   display:flex;
   justify-content: center;
   margin:10px auto;
-  overflow:hidden;
+  // overflow:hidden;
   padding:10px;
   width: 100%;
 }
@@ -213,6 +216,7 @@ textarea{
   float:right;
   width:10%;
 }
+
 
 .roundedrentalpicture {
   background-color: black;
@@ -323,6 +327,19 @@ textarea{
       width: 100%;
       text-align: center;
       margin-bottom: 1em;
+    }
+    .realtor-only{
+      display: inline-block;
+    }
+    .realtor-only-center{
+      width:100%;
+    }
+    .realtor-only-left{
+      width:100%;
+    }
+    .realtor-only-right{
+      text-align: center;
+      width:100%;
     }
     .rentalInfo {
       width: 100%;

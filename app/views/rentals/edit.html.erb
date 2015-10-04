@@ -3,7 +3,7 @@
     <h2>Edit Rental</h2>
     <%= render partial: "rental_form" %>
     <%= form_for(@rental, method: :delete, data: { confirm: 'Are you sure?' }) do |f| %>
-      <%= f.submit "DELETE", class: 'btn btn-danger btn-md' %>
+      <%= f.submit "DELETE", class: 'btn btn-danger btn-md delete-rental' %>
     <% end %>
   <%end%>
 <%end%>
